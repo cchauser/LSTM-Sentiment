@@ -629,7 +629,7 @@ class reviewAI:
             if self.f_pred(self.x_train[i]) == self.y_train[i]:
                 train_Correct += 1
             loss += self.ce_error(self.x_train[i], self.Class(self.y_train[i]))
-        return valid_Correct/len(self.y_val), train_Correct/len(self.y_train//2), loss/(len(self.x_train)//2)
+        return valid_Correct/len(self.y_val), train_Correct/(len(self.y_train)//2), loss/(len(self.x_train)//2)
 
 
     #Drops words from input by percentage.
